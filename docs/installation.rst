@@ -8,6 +8,8 @@ Docker (recommended)
 
 If you are on a Linux machine you will need `Docker <https://docs.docker.com/installation/>`_ installed or if you are using a `Windows <https://docs.docker.com/installation/windows/>`_ or `Mac OS X <https://docs.docker.com/installation/mac/>`_ machine you will need `boot2docker <http://boot2docker.io/>`_.
 
+Portia stores projects in a local folder. You need to first create or choose an existing file path for this folder. Then in the command(s) below, substitute `<PROJECTS_FOLDER>` with the full file pathname to this folder.
+
 You can run Portia with the command below::
 
     docker run -i -t --rm -v <PROJECTS_FOLDER>:/app/data/projects:rw -p 9001:9001 scrapinghub/portia
@@ -24,7 +26,7 @@ To extract data using portia you can run your spider with::
 
 After the crawl finishes you will find your extracted data in the the `OUTPUT_FOLDER`
 
-.. warning:: For Windows the `<PROJECT_FOLDER>` path must be of the form `/<DRIVE_LETTER/<PATH>`
+.. warning:: For Windows the `<PROJECTS_FOLDER>` path must be of the form `/<DRIVE_LETTER>/<PATH>`
 
 
 Vagrant
